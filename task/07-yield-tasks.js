@@ -46,10 +46,17 @@ function* get99BottlesOfBeer() {
  * @return {Iterable.<number>}
  *
  */
-function* getFibonacciSequence() {
-    throw new Error('Not implemented');
-}
 
+function* getFibonacciSequence() {
+    let x1 = 0,
+    x2 = 1; 
+    while (true) {
+        let x = x1;
+        x1 = x2;
+        x2 = x1 + x;
+        yield x;
+}
+}
 
 /**
  * Traverses a tree using the depth-first strategy
